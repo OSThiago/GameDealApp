@@ -15,6 +15,10 @@
 		DB328A0329A079850074AEF1 /* GameDealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A0229A079850074AEF1 /* GameDealAppTests.swift */; };
 		DB328A0D29A079850074AEF1 /* GameDealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A0C29A079850074AEF1 /* GameDealAppUITests.swift */; };
 		DB328A0F29A079850074AEF1 /* GameDealAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A0E29A079850074AEF1 /* GameDealAppUITestsLaunchTests.swift */; };
+		DB328A2429AA4D850074AEF1 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2329AA4D850074AEF1 /* BaseURL.swift */; };
+		DB328A2529AA4EC90074AEF1 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2329AA4D850074AEF1 /* BaseURL.swift */; };
+		DB328A2829AA62C50074AEF1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2729AA62C50074AEF1 /* Endpoint.swift */; };
+		DB328A2929AA640E0074AEF1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2729AA62C50074AEF1 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,8 @@
 		DB328A0829A079850074AEF1 /* GameDealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameDealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB328A0C29A079850074AEF1 /* GameDealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDealAppUITests.swift; sourceTree = "<group>"; };
 		DB328A0E29A079850074AEF1 /* GameDealAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDealAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB328A2329AA4D850074AEF1 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		DB328A2729AA62C50074AEF1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +174,18 @@
 		DB328A2229A9A5C70074AEF1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DB328A2329AA4D850074AEF1 /* BaseURL.swift */,
+				DB328A2729AA62C50074AEF1 /* Endpoint.swift */,
+				DB328A2629AA61FF0074AEF1 /* CheapSharkAPI */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DB328A2629AA61FF0074AEF1 /* CheapSharkAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheapSharkAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB328A2829AA62C50074AEF1 /* Endpoint.swift in Sources */,
 				DB3289F029A079830074AEF1 /* ViewController.swift in Sources */,
 				DB3289EC29A079830074AEF1 /* AppDelegate.swift in Sources */,
+				DB328A2429AA4D850074AEF1 /* BaseURL.swift in Sources */,
 				DB3289EE29A079830074AEF1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB328A2529AA4EC90074AEF1 /* BaseURL.swift in Sources */,
+				DB328A2929AA640E0074AEF1 /* Endpoint.swift in Sources */,
 				DB328A0329A079850074AEF1 /* GameDealAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

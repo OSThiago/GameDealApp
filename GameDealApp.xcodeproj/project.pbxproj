@@ -97,9 +97,9 @@
 		DB3289EA29A079830074AEF1 /* GameDealApp */ = {
 			isa = PBXGroup;
 			children = (
-				DB3289EB29A079830074AEF1 /* AppDelegate.swift */,
-				DB3289ED29A079830074AEF1 /* SceneDelegate.swift */,
-				DB3289EF29A079830074AEF1 /* ViewController.swift */,
+				DB328A1D29A99E0B0074AEF1 /* Aplication */,
+				DB328A1E29A99E680074AEF1 /* Presentation */,
+				DB328A1F29A99EC50074AEF1 /* Business Logic */,
 				DB3289F429A079850074AEF1 /* Assets.xcassets */,
 				DB3289F629A079850074AEF1 /* LaunchScreen.storyboard */,
 				DB3289F929A079850074AEF1 /* Info.plist */,
@@ -122,6 +122,54 @@
 				DB328A0E29A079850074AEF1 /* GameDealAppUITestsLaunchTests.swift */,
 			);
 			path = GameDealAppUITests;
+			sourceTree = "<group>";
+		};
+		DB328A1D29A99E0B0074AEF1 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				DB3289EB29A079830074AEF1 /* AppDelegate.swift */,
+				DB3289ED29A079830074AEF1 /* SceneDelegate.swift */,
+				DB3289EF29A079830074AEF1 /* ViewController.swift */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		DB328A1E29A99E680074AEF1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB328A2029A99FCA0074AEF1 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DB328A1F29A99EC50074AEF1 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				DB328A2229A9A5C70074AEF1 /* Services */,
+				DB328A2129A9A1950074AEF1 /* Entities */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		DB328A2029A99FCA0074AEF1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DB328A2129A9A1950074AEF1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DB328A2229A9A5C70074AEF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

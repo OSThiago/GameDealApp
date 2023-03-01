@@ -9,27 +9,44 @@ import Foundation
 
 protocol Endpoint {
     var baseURLString: String { get }
+    var httpMethod: String { get }
     var path: String { get }
     var query: String? { get }
     var key: String? { get }
 }
 
 extension Endpoint {
-    private var url: String {
-        return baseURLString + path
+    
+    var url: String {
+        
+        var url = baseURLString + path
+        
+        if let query {
+            url.append(query)
+        }
+        
+        if let key {
+            url.append(formatedKey(key: key))
+        }
+        
+        return url
     }
     
-    func getUrl(query: String?, key: String?) -> String {
-        var url = self.url
-        
-        if let queryparam = query {
-            
-        }
-        
-        if key != nil {
-            
-        }
-            
-        return url
+//    func getUrl(query: String?, key: String?) -> String {
+//        var url = self.url
+//
+//        if let query {
+//            url.append(contentsOf: query)
+//        }
+//
+//        if let key {
+//            url.append(formatedKey(key: key))
+//        }
+//
+//        return url
+//    }
+    
+    private func formatedKey(key: String) -> String {
+        return "key=\(key)"
     }
 }

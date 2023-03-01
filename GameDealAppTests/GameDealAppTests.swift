@@ -9,23 +9,39 @@ import XCTest
 @testable import GameDealApp
 
 final class GameDealAppTests: XCTestCase {
-
+    
+    var worker = WorkerCheapShark()
+    
+    var endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: 0)
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func getDealList() throws {
+        
+        worker.getDealsList(endpoint: endpoint) { result, error in
+            DispatchQueue.main.async {
+                XCTAssert(result.count == 60)
+            }
+        }
+        
     }
-
+    
+    func testGameDeal() throws {
+        worker.getDealsList(endpoint: endpoint) { result, error in
+            //DispatchQueue.main.async {
+                //XCTAssertEqual(result[0].title, "batman")
+                XCTAssert(result[0].title == "batman")
+            //}
+        }
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

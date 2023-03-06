@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     func fetchGameDealList() {
         DispatchQueue.main.async {
             
-            let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 10, sortList: .DEALRATING, AAA: true)
+            let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 10, sortList: .DEALRATING, AAA: true, storeID: nil)
             
             self.worker.getDealsList(endpoint: endpoint) { data, error in
                 print(data)

@@ -14,7 +14,7 @@ enum ServiceError: Error {
 
 class WorkerCheapShark {
     
-    func getDealsList(endpoint: Endpoint, completion: @escaping ([FeedGameDeal] ,ServiceError) -> ()) {
+    func getDealsList(endpoint: Endpoint, completion: @escaping (Result<[FeedGameDeal] ,ServiceError>) -> ()) {
         
         let session = URLSession.shared
         
@@ -31,10 +31,10 @@ class WorkerCheapShark {
                 do {
                     let data = try JSONDecoder().decode([FeedGameDeal].self, from: data)
                     
-                    completion(data, ServiceError.network(error))
+                    completion(.success(data))
                     
                 } catch let error {
-                    print("error \(error)")
+                    completion(.failure(ServiceError.network(error)))
                 }
             }
         }

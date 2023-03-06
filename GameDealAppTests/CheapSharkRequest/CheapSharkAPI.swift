@@ -21,9 +21,9 @@ final class CheapSharkAPI: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testFetDealList() throws {
+    func testFeedDealList() throws {
         
-        let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: false)
+        let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: false, storeID: "1")
         
         // Create expectation
         let exp = expectation(description: "Fetching deals list")

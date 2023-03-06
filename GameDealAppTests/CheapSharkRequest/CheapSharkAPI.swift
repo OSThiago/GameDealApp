@@ -31,9 +31,14 @@ final class CheapSharkAPI: XCTestCase {
         var list = [FeedGameDeal]()
         
         // Call asynchronous method
-        worker.getDealsList(endpoint: endpoint) { result, error in
+        worker.getDealsList(endpoint: endpoint) { result in
             
-            list.append(contentsOf: result)
+            switch result {
+            case .success(let dealsList):
+                list.append(contentsOf: dealsList)
+            case .failure(let error):
+                XCTFail(ServiceError.network(error).localizedDescription)
+            }
             
             // Mark fulfill when finish
             exp.fulfill()

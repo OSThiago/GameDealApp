@@ -25,8 +25,13 @@ class ViewController: UIViewController {
             
             let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 10, sortList: .DEALRATING, AAA: true, storeID: nil)
             
-            self.worker.getDealsList(endpoint: endpoint) { data, error in
-                print(data)
+            self.worker.getDealsList(endpoint: endpoint) { result in
+                switch result {
+                case .success(let dealList):
+                    print(dealList)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }

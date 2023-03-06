@@ -41,38 +41,43 @@ class WorkerCheapShark {
         task.resume()
     }
     
-    func test2(completion: @escaping ([FeedGameDeal]) -> ()) {
-        var request = URLRequest(url: URL(string: "https://www.cheapshark.com/api/1.0/deals?pageNumber=0&pageSize=60&sortBy=Store&AAA=0")!,timeoutInterval: Double.infinity)
-        request.httpMethod = "GET"
-
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-          guard let data = data else {
-            print(String(describing: error))
-            return
-          }
-            
-            do {
-                let data = try JSONDecoder().decode([FeedGameDeal].self, from: data)
-                
-                completion(data)
-                
-            } catch let error {
-                print("error \(error)")
-            }
-        }
-
-        task.resume()
+    func getDealLookup(endpoint: Endpoint, completion: @escaping (FeedGameDeal?) -> ()) {
+        
     }
     
-}
-
-struct FeedGameDeal: Codable {
-    let gameID: String
-    let dealID: String
-    let storeID: String
-    let title: String
-    let salePrice: String
-    let normalPrice: String
-    let savings: String
-    let thumb: String
+    func getGameLookup(endpoint: Endpoint, completion: @escaping (FeedGameDeal) -> ()) {
+        
+    }
+    
+    func getStores(completion: @escaping (Result<[StoresCheapShark], ServiceError>) -> ()) {
+        
+        // Request
+        let endpoint = EndpointCasesCheapShark.getStores
+        
+        let url = URL(string: endpoint.url)!
+        
+        print(url)
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = endpoint.httpMethod
+        
+        // Session task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            
+            if let data {
+                do {
+                    // Decode Json
+                    let data = try JSONDecoder().decode([StoresCheapShark].self, from: data)
+                    completion(.success(data))
+                } catch {
+                    completion(.failure(ServiceError.network(error)))
+                }
+            }
+            
+        }
+        dataTask.resume()
+    }
 }

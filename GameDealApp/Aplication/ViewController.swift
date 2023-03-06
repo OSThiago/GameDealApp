@@ -16,14 +16,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .blue
      
-        fetchGameDealList()
-        //fetchGameList2()
+        //fetchGameDealList()
+        //fetchStores()
     }
 
     func fetchGameDealList() {
         DispatchQueue.main.async {
             
-            let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: 0)
+            let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 10, sortList: .DEALRATING, AAA: true)
             
             self.worker.getDealsList(endpoint: endpoint) { data, error in
                 print(data)
@@ -31,13 +31,22 @@ class ViewController: UIViewController {
         }
     }
     
-    func fetchGameList2() {
+    func fetchStores() {
         DispatchQueue.main.async {
-            self.worker.test2 { list in
-                print(list)
+            
+            var stores = [StoresCheapShark]()
+            
+            self.worker.getStores { result in
+                
+                switch result {
+                case .success(let storesList):
+                    stores.append(contentsOf: storesList)
+                    print(stores)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }
-
 }
 

@@ -32,20 +32,6 @@ extension Endpoint {
         return url
     }
     
-//    func getUrl(query: String?, key: String?) -> String {
-//        var url = self.url
-//
-//        if let query {
-//            url.append(contentsOf: query)
-//        }
-//
-//        if let key {
-//            url.append(formatedKey(key: key))
-//        }
-//
-//        return url
-//    }
-    
     private func formatedKey(key: String) -> String {
         return "key=\(key)"
     }

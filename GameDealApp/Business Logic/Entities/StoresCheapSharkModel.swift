@@ -33,18 +33,3 @@ extension StoreImagesCheapShark {
         logo: "/img/stores/banners/0.png",
         icon: "/img/stores/banners/0.png")
 }
-
-/*
- 
- {
-         "storeID": "1",
-         "storeName": "Steam",
-         "isActive": 1,
-         "images": {
-             "banner": "/img/stores/banners/0.png",
-             "logo": "/img/stores/banners/0.png",
-             "icon": "/img/stores/banners/0.png"
-         }
-     },
- 
- */

@@ -12,12 +12,8 @@ final class CheapSharkAPI: XCTestCase {
     
     var worker = WorkerCheapShark()
     
-    //var endpoint: EndpointCasesCheapShark?
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-//        endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: false)
         
     }
 
@@ -25,14 +21,9 @@ final class CheapSharkAPI: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func getDealList() throws {
+    func testFetDealList() throws {
         
-        var endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: false)
-        
-//        guard let endpoint = self.endpointDeals else {
-//            XCTFail("Endpoint Fail")
-//            return
-//        }
+        let endpoint = EndpointCasesCheapShark.getDealsList(pageNumber: 0, pageSize: 3, sortList: .DEALRATING, AAA: false)
         
         // Create expectation
         let exp = expectation(description: "Fetching deals list")
@@ -53,25 +44,30 @@ final class CheapSharkAPI: XCTestCase {
         
         // our expectation has been fulfilled, so we can check the result is correct
         XCTAssertEqual(list.count, 3)
-        XCTAssertFalse(list[0].title == "batman")
     }
     
-    func getStores() throws {
-
-        let endpoint = EndpointCasesCheapShark.getStores(())
+    func testGetStores() async throws {
 
         let expectation = expectation(description: "Fetch Stores informatinos")
 
         var stores = [StoresCheapShark]()
-
-        worker.getStores(endpoint: endpoint) { result in
-            stores.append(contentsOf: result)
-
+            
+        worker.getStores() { result in
+            
+            switch result {
+            case .success(let storesResult):
+                stores.append(contentsOf: storesResult)
+            case .failure(_):
+                XCTFail()
+            }
             expectation.fulfill()
         }
+        
 
-        waitForExpectations(timeout: 3.0)
-
+        await self.waitForExpectations(timeout: 3.0)
+        
+        XCTAssert(!stores.isEmpty)
+        
         XCTAssertEqual(stores[0].storeName, StoresCheapShark.steamMock.storeName)
     }
     

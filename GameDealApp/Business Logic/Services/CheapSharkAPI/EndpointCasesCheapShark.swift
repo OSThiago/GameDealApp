@@ -7,12 +7,17 @@
 
 import Foundation
 
+enum Response<Success, Failure> where Failure: Error {
+    case success(Success)
+    case failure(Failure)
+}
+
 enum EndpointCasesCheapShark: Endpoint {
     
-    case getDealsList(pageNumber: Int, pageSize: Int, sortList: CheapSharkSortDeals, AAA: Int)
+    case getDealsList(pageNumber: Int, pageSize: Int, sortList: CheapSharkSortDeals, AAA: Bool)
     case getDealLookup(_ dealID: String)
     case getGameLookup(_ gameID: String)
-    case getStores(Void)
+    case getStores
     
     var baseURLString: String {
         return BaseURL.cheapsharkURL
@@ -27,7 +32,7 @@ enum EndpointCasesCheapShark: Endpoint {
             return "GET"
         case .getGameLookup(_):
             return "GET"
-        case .getStores():
+        case .getStores:
             return "GET"
         }
     }
@@ -40,15 +45,22 @@ enum EndpointCasesCheapShark: Endpoint {
             return "/api/1.0/deals?"
         case .getGameLookup(_):
             return "/api/1.0/deals?"
-        case .getStores():
-            return "api/1.0/stores?"
+        case .getStores:
+            return "/api/1.0/stores"
         }
     }
     
     var query: String? {
         switch self {
         case .getDealsList(pageNumber: let pageNumber, pageSize: let pageSize, sortList: let sortList, AAA: let AAA):
-            return "pageNumber=\(pageNumber)&pageSize=\(pageSize)&sortList=\(sortList)&AAA\(AAA)"
+            
+            var isAAA = 0
+            
+            if AAA {
+                isAAA = 1
+            }
+            
+            return "pageNumber=\(pageNumber)&pageSize=\(pageSize)&sortList=\(sortList)&AAA\(isAAA)"
             
         case .getDealLookup(dealID: let dealID):
             return "id=\(dealID)"
@@ -56,7 +68,7 @@ enum EndpointCasesCheapShark: Endpoint {
         case .getGameLookup(gameID: let gameID):
             return "id=\(gameID)"
             
-        case .getStores():
+        case .getStores:
             return nil
         }
     }

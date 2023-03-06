@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB312DE429AE856D00E29A0A /* CheapSharkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB312DE329AE856D00E29A0A /* CheapSharkAPI.swift */; };
+		DB312DE629B02B2F00E29A0A /* StoresCheapSharkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB312DE529B02B2F00E29A0A /* StoresCheapSharkModel.swift */; };
 		DB3289EC29A079830074AEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3289EB29A079830074AEF1 /* AppDelegate.swift */; };
 		DB3289EE29A079830074AEF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3289ED29A079830074AEF1 /* SceneDelegate.swift */; };
 		DB3289F029A079830074AEF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3289EF29A079830074AEF1 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		DB328A2929AA640E0074AEF1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2729AA62C50074AEF1 /* Endpoint.swift */; };
 		DB328A2B29ACF5770074AEF1 /* EndpointCasesCheapShark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2A29ACF5770074AEF1 /* EndpointCasesCheapShark.swift */; };
 		DB328A2D29AE1CFD0074AEF1 /* WorkerCheapShark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2C29AE1CFD0074AEF1 /* WorkerCheapShark.swift */; };
+		DB6DB94A29B18041004A61C3 /* FeedGameDealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6DB94929B18041004A61C3 /* FeedGameDealModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		DB312DE329AE856D00E29A0A /* CheapSharkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapSharkAPI.swift; sourceTree = "<group>"; };
+		DB312DE529B02B2F00E29A0A /* StoresCheapSharkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresCheapSharkModel.swift; sourceTree = "<group>"; };
 		DB3289E829A079830074AEF1 /* GameDealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3289EB29A079830074AEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3289ED29A079830074AEF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		DB328A2729AA62C50074AEF1 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DB328A2A29ACF5770074AEF1 /* EndpointCasesCheapShark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointCasesCheapShark.swift; sourceTree = "<group>"; };
 		DB328A2C29AE1CFD0074AEF1 /* WorkerCheapShark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCheapShark.swift; sourceTree = "<group>"; };
+		DB6DB94929B18041004A61C3 /* FeedGameDealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGameDealModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +126,8 @@
 		DB328A0129A079850074AEF1 /* GameDealAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB6DB94629B17D1E004A61C3 /* CheapSharkRequest */,
 				DB328A0229A079850074AEF1 /* GameDealAppTests.swift */,
-				DB312DE329AE856D00E29A0A /* CheapSharkAPI.swift */,
 			);
 			path = GameDealAppTests;
 			sourceTree = "<group>";
@@ -174,6 +178,8 @@
 		DB328A2129A9A1950074AEF1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DB312DE529B02B2F00E29A0A /* StoresCheapSharkModel.swift */,
+				DB6DB94929B18041004A61C3 /* FeedGameDealModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -195,6 +201,14 @@
 				DB328A2C29AE1CFD0074AEF1 /* WorkerCheapShark.swift */,
 			);
 			path = CheapSharkAPI;
+			sourceTree = "<group>";
+		};
+		DB6DB94629B17D1E004A61C3 /* CheapSharkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				DB312DE329AE856D00E29A0A /* CheapSharkAPI.swift */,
+			);
+			path = CheapSharkRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +344,8 @@
 				DB328A2B29ACF5770074AEF1 /* EndpointCasesCheapShark.swift in Sources */,
 				DB328A2829AA62C50074AEF1 /* Endpoint.swift in Sources */,
 				DB328A2D29AE1CFD0074AEF1 /* WorkerCheapShark.swift in Sources */,
+				DB312DE629B02B2F00E29A0A /* StoresCheapSharkModel.swift in Sources */,
+				DB6DB94A29B18041004A61C3 /* FeedGameDealModel.swift in Sources */,
 				DB3289F029A079830074AEF1 /* ViewController.swift in Sources */,
 				DB3289EC29A079830074AEF1 /* AppDelegate.swift in Sources */,
 				DB328A2429AA4D850074AEF1 /* BaseURL.swift in Sources */,

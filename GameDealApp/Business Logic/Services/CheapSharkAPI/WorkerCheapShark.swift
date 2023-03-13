@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum ServiceError: Error {
-    case invalidURL
-    case network(Error?)
-}
-
 class WorkerCheapShark {
     
     func getDealsList(endpoint: Endpoint, completion: @escaping (Result<[FeedGameDeal] ,ServiceError>) -> ()) {

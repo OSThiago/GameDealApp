@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum Response<Success, Failure> where Failure: Error {
-    case success(Success)
-    case failure(Failure)
-}
-
 enum EndpointCasesCheapShark: Endpoint {
     
     case getDealsList(pageNumber: Int, pageSize: Int, sortList: CheapSharkSortDeals, AAA: Bool, storeID: String?)
@@ -88,14 +83,3 @@ enum EndpointCasesCheapShark: Endpoint {
 //    case sortBy(_ sortList: CheapSharkSortDeals)
 //    case AAA(_ onlyAAA: Int)
 //}
-
-enum CheapSharkSortDeals: String {
-    case DEALRATING = "DealRating"
-    case SAVINGS = "Savings"
-    case PRICE = "Price"
-    case METACRITIC = "Metacritic"
-    case REVIEWS = "Reviews"
-    case RELEASE = "Release"
-    case STORE = "Store"
-    case RECENT = "Recent"
-}

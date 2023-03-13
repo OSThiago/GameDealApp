@@ -24,6 +24,7 @@
 		DB328A2B29ACF5770074AEF1 /* EndpointCasesCheapShark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2A29ACF5770074AEF1 /* EndpointCasesCheapShark.swift */; };
 		DB328A2D29AE1CFD0074AEF1 /* WorkerCheapShark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB328A2C29AE1CFD0074AEF1 /* WorkerCheapShark.swift */; };
 		DB6DB94A29B18041004A61C3 /* FeedGameDealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6DB94929B18041004A61C3 /* FeedGameDealModel.swift */; };
+		DBF6B72229B695DA003E816E /* DealLookupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF6B72129B695DA003E816E /* DealLookupModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		DB328A2A29ACF5770074AEF1 /* EndpointCasesCheapShark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointCasesCheapShark.swift; sourceTree = "<group>"; };
 		DB328A2C29AE1CFD0074AEF1 /* WorkerCheapShark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCheapShark.swift; sourceTree = "<group>"; };
 		DB6DB94929B18041004A61C3 /* FeedGameDealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGameDealModel.swift; sourceTree = "<group>"; };
+		DBF6B72129B695DA003E816E /* DealLookupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealLookupModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				DB312DE529B02B2F00E29A0A /* StoresCheapSharkModel.swift */,
 				DB6DB94929B18041004A61C3 /* FeedGameDealModel.swift */,
+				DBF6B72129B695DA003E816E /* DealLookupModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				DB328A2D29AE1CFD0074AEF1 /* WorkerCheapShark.swift in Sources */,
 				DB312DE629B02B2F00E29A0A /* StoresCheapSharkModel.swift in Sources */,
 				DB6DB94A29B18041004A61C3 /* FeedGameDealModel.swift in Sources */,
+				DBF6B72229B695DA003E816E /* DealLookupModel.swift in Sources */,
 				DB3289F029A079830074AEF1 /* ViewController.swift in Sources */,
 				DB3289EC29A079830074AEF1 /* AppDelegate.swift in Sources */,
 				DB328A2429AA4D850074AEF1 /* BaseURL.swift in Sources */,

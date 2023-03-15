@@ -18,6 +18,12 @@
 		DB0CFB9B29BF649F00035A09 /* StoreImagesCheapShark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFB9A29BF649F00035A09 /* StoreImagesCheapShark.swift */; };
 		DB0CFB9D29BF64D400035A09 /* StoresCheapSharkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFB9C29BF64D400035A09 /* StoresCheapSharkMock.swift */; };
 		DB0CFBA029BF657E00035A09 /* FeedGameDealMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFB9F29BF657E00035A09 /* FeedGameDealMock.swift */; };
+		DB0CFBA329BF7A6100035A09 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFBA229BF7A6100035A09 /* FeedViewController.swift */; };
+		DB0CFBA529BF7C3500035A09 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFBA429BF7C3500035A09 /* FeedView.swift */; };
+		DB0CFBA729BF7E2A00035A09 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFBA629BF7E2A00035A09 /* FeedInteractor.swift */; };
+		DB0CFBA929BF7EAD00035A09 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFBA829BF7EAD00035A09 /* FeedPresenter.swift */; };
+		DB0CFBAB29BF7EF200035A09 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFBAA29BF7EF200035A09 /* FeedRouter.swift */; };
+		DB0CFBAD29C12EF200035A09 /* FeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CFBAC29C12EF200035A09 /* FeedConfigurator.swift */; };
 		DB312DE429AE856D00E29A0A /* CheapSharkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB312DE329AE856D00E29A0A /* CheapSharkAPI.swift */; };
 		DB3289EC29A079830074AEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3289EB29A079830074AEF1 /* AppDelegate.swift */; };
 		DB3289EE29A079830074AEF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3289ED29A079830074AEF1 /* SceneDelegate.swift */; };
@@ -65,6 +71,12 @@
 		DB0CFB9A29BF649F00035A09 /* StoreImagesCheapShark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImagesCheapShark.swift; sourceTree = "<group>"; };
 		DB0CFB9C29BF64D400035A09 /* StoresCheapSharkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresCheapSharkMock.swift; sourceTree = "<group>"; };
 		DB0CFB9F29BF657E00035A09 /* FeedGameDealMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGameDealMock.swift; sourceTree = "<group>"; };
+		DB0CFBA229BF7A6100035A09 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DB0CFBA429BF7C3500035A09 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		DB0CFBA629BF7E2A00035A09 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		DB0CFBA829BF7EAD00035A09 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		DB0CFBAA29BF7EF200035A09 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		DB0CFBAC29C12EF200035A09 /* FeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConfigurator.swift; sourceTree = "<group>"; };
 		DB312DE329AE856D00E29A0A /* CheapSharkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapSharkAPI.swift; sourceTree = "<group>"; };
 		DB3289E829A079830074AEF1 /* GameDealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3289EB29A079830074AEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +157,19 @@
 				DB6DB94929B18041004A61C3 /* FeedGameDeal.swift */,
 			);
 			path = FeedGameDealModel;
+			sourceTree = "<group>";
+		};
+		DB0CFBA129BF776200035A09 /* FeedDeal */ = {
+			isa = PBXGroup;
+			children = (
+				DB0CFBA429BF7C3500035A09 /* FeedView.swift */,
+				DB0CFBA229BF7A6100035A09 /* FeedViewController.swift */,
+				DB0CFBA629BF7E2A00035A09 /* FeedInteractor.swift */,
+				DB0CFBA829BF7EAD00035A09 /* FeedPresenter.swift */,
+				DB0CFBAA29BF7EF200035A09 /* FeedRouter.swift */,
+				DB0CFBAC29C12EF200035A09 /* FeedConfigurator.swift */,
+			);
+			path = FeedDeal;
 			sourceTree = "<group>";
 		};
 		DB3289DF29A079830074AEF1 = {
@@ -228,6 +253,7 @@
 		DB328A2029A99FCA0074AEF1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DB0CFBA129BF776200035A09 /* FeedDeal */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -403,12 +429,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0CFBAB29BF7EF200035A09 /* FeedRouter.swift in Sources */,
 				DB328A2B29ACF5770074AEF1 /* EndpointCasesCheapShark.swift in Sources */,
 				DB328A2829AA62C50074AEF1 /* Endpoint.swift in Sources */,
+				DB0CFBA729BF7E2A00035A09 /* FeedInteractor.swift in Sources */,
+				DB0CFBA929BF7EAD00035A09 /* FeedPresenter.swift in Sources */,
+				DB0CFBA329BF7A6100035A09 /* FeedViewController.swift in Sources */,
 				DB0CFB9629BF63AD00035A09 /* DealLookupMock.swift in Sources */,
 				DB0CFB9B29BF649F00035A09 /* StoreImagesCheapShark.swift in Sources */,
 				DB0CFB9D29BF64D400035A09 /* StoresCheapSharkMock.swift in Sources */,
 				DB328A2D29AE1CFD0074AEF1 /* WorkerCheapShark.swift in Sources */,
+				DB0CFBA529BF7C3500035A09 /* FeedView.swift in Sources */,
 				DB0CFBA029BF657E00035A09 /* FeedGameDealMock.swift in Sources */,
 				DB0CFB9029BF62C700035A09 /* DealLookup.swift in Sources */,
 				DB0CFB8A29BF601D00035A09 /* Response.swift in Sources */,
@@ -421,6 +452,7 @@
 				DB0CFB8C29BF607000035A09 /* SortDeals.swift in Sources */,
 				DB328A2429AA4D850074AEF1 /* BaseURL.swift in Sources */,
 				DB0CFB9429BF633400035A09 /* CheapestPrice.swift in Sources */,
+				DB0CFBAD29C12EF200035A09 /* FeedConfigurator.swift in Sources */,
 				DB3289EE29A079830074AEF1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
